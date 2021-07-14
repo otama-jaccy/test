@@ -37,3 +37,6 @@ jobs:
 
       - name: echo test
         run: echo ${{secrets.hoge}}
+
+			- name: hoge
+				run: echo "hhoge"
