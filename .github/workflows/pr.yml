@@ -3,10 +3,14 @@ on:
     branches: [ main ]
   
 jobs:
-  steps:
-    - uses: 8BitJonny/gh-get-current-pr@2.2.0
-      id: PR
+  pr:
+    steps:
+      name: status
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+      - uses: 8BitJonny/gh-get-current-pr@2.2.0
+        id: PR
 
-    - run: echo "Your PR number is ${{ steps.PR.outputs.number }} and its JSON is ${{ steps.PR.outputs.pr }}"
+      - run: echo "Your PR number is ${{ steps.PR.outputs.number }} and its JSON is ${{ steps.PR.outputs.pr }}"
 
-    - run: echo "${{ steps.PR.outputs.prTitle }}"
+      - run: echo "${{ steps.PR.outputs.prTitle }}"
