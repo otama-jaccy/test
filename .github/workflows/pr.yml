@@ -1,0 +1,12 @@
+on:
+  push:
+    branches: [ main ]
+  
+jobs:
+  steps:
+    - uses: 8BitJonny/gh-get-current-pr@2.2.0
+      id: PR
+
+    - run: echo "Your PR number is ${{ steps.PR.outputs.number }} and its JSON is ${{ steps.PR.outputs.pr }}"
+
+    - run: echo "${{ steps.PR.outputs.prTitle }}"
