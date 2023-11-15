@@ -4,10 +4,11 @@ on:
   
 jobs:
   pr:
+    name: status
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
     steps:
-      name: status
-      # The type of runner that the job will run on
-      runs-on: ubuntu-latest
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
 
