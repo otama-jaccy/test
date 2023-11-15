@@ -14,4 +14,4 @@ jobs:
 
       - run: echo "Your PR number is ${{ steps.PR.outputs.number }} and its JSON is ${{ steps.PR.outputs.pr }}"
 
-      - run: echo "${{ steps.PR.outputs.prTitle }}"
+      - run: echo "${{ steps.PR.outputs.pr_title }}"
